@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  final techstack = "android development";
+  final techstack = "world";
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text("welcome to the world of $techstack!"),
+          child: Text("welcome to my $techstack!"),
         ),
       ),
       drawer: Drawer(),
