@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 class HomePage extends StatelessWidget {
   final techstack = "world";
 
@@ -7,14 +9,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("flutterinco"),
+        title: Text("Flutterinco App"),
+        centerTitle: true,
       ),
       body: Center(
         child: Container(
           child: Text("welcome to my $techstack!"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
