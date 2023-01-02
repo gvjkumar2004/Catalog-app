@@ -1,8 +1,6 @@
-# Basic_flutter_application
 
-I mean it is a catalog app
 
-A new Flutter project.
+A basic catalog application.
 
 ## Getting Started
 
