@@ -12,8 +12,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar:
-            AppBar(), // Here I used appbar to implement a back button on the top left.
+        appBar: AppBar(
+            backgroundColor: Colors
+                .transparent), // Here I used appbar to implement a back button on the top left.
         backgroundColor: MyTheme.creamColor,
         bottomNavigationBar: Container(
           color: Colors.white,
@@ -28,8 +29,8 @@ class HomeDetailPage extends StatelessWidget {
                           backgroundColor:
                               MaterialStatePropertyAll(MyTheme.darkBluishColor),
                           shape: MaterialStateProperty.all(StadiumBorder())),
-                      child: "Buy".text.make())
-                  .wh(100, 50)
+                      child: "Add to cart".text.make())
+                  .wh(120, 50)
             ],
           ).p32(),
         ),
@@ -59,6 +60,11 @@ class HomeDetailPage extends StatelessWidget {
                           .xl
                           .make(),
                       10.heightBox,
+                      "Tempor sanctus et sanctus sanctus diam et diam. Aliquyam rebum sadipscing aliquyam no duo clita labore takimata. Nonumy labore et magna erat ea vero, ea voluptua invidunt consetetur sit. Sea eos consetetur magna est sit ipsum sea amet, sadipscing amet aliquyam ea diam, ipsum diam et labore eos gubergren sed.."
+                          .text
+                          .textStyle(context.captionStyle)
+                          .make()
+                          .p16()
                     ],
                   ).py64(),
                 ),

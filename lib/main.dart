@@ -3,6 +3,7 @@
 // ignore_for_file: invalid_language_version_override
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/cart_page.dart';
 //  import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.cartRoute: (context) => CartPage(),
       },
     );
   }
