@@ -8,7 +8,7 @@ class catalogHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        "Flutterinco App".text.xl5.bold.color(MyTheme.darkBluishColor).make(),
+        "Flutterinco App".text.xl5.bold.color(context.theme.accentColor).make(),
         "Trending Products".text.xl2.make(),
       ],
     );

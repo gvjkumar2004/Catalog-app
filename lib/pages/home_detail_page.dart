@@ -15,9 +15,9 @@ class HomeDetailPage extends StatelessWidget {
         appBar: AppBar(
             backgroundColor: Colors
                 .transparent), // Here I used appbar to implement a back button on the top left.
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: context.canvasColor,
         bottomNavigationBar: Container(
-          color: Colors.white,
+          color: context.cardColor,
           child: ButtonBar(
             alignment: MainAxisAlignment.spaceBetween,
             buttonPadding: EdgeInsets.zero,
@@ -26,8 +26,8 @@ class HomeDetailPage extends StatelessWidget {
               ElevatedButton(
                       onPressed: () {},
                       style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(MyTheme.darkBluishColor),
+                          backgroundColor: MaterialStatePropertyAll(
+                              context.theme.buttonColor),
                           shape: MaterialStateProperty.all(StadiumBorder())),
                       child: "Add to cart".text.make())
                   .wh(120, 50)
@@ -48,13 +48,11 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      catalog.name.text.xl4
-                          .color(MyTheme.darkBluishColor)
-                          .make(),
+                      catalog.name.text.xl4.color(context.accentColor).make(),
                       catalog.desc.text
                           .textStyle(context.captionStyle)
                           .xl
