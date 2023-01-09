@@ -1,4 +1,14 @@
+import 'dart:convert';
+
 class CatalogModel {
+
+  // Get Item by ID
+  static Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  // Get Item by position
+  static Item getByPosition(int pos) => items[pos];
+
   static List<Item> items = [
     Item(
         id: 1,
@@ -7,8 +17,10 @@ class CatalogModel {
         price: 1099,
         color: "#33505a",
         image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc")
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"),
   ];
+
+  static get static => null;
 }
 
 class Item {
