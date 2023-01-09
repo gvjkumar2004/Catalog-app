@@ -1,6 +1,6 @@
-# flutter_application_1
+# Flutterinco
 
-A new Flutter project.
+A basic catalog app
 
 ## Getting Started
 
