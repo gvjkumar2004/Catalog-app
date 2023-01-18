@@ -1,18 +1,17 @@
+// import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_1/core/store.dart';
 import 'package:flutter_application_1/models/cart.dart';
 import 'package:flutter_application_1/models/catalog.dart';
 import 'package:flutter_application_1/utils/routes.dart';
-// import 'package:flutter_application_1/widgets/themes.dart';
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
-// import '../widgets/drawer.dart';
-// import '../widgets/item_widget.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../widgets/home_widgets/catalog_header.dart';
 import '../widgets/home_widgets/catalog_list.dart';
-// import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,6 +21,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final techstack = "world";
 
+  // final Url = "http://localhost:3000/products";
+
   @override
   void initState() {
     // TODO: implement initState
@@ -30,8 +31,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   LoadData() async {
-    var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
-    var decodedData = jsonDecode(catalogJson);
+    // await Future.delayed(Duration(seconds: 2));
+    final catalogJson =
+        await rootBundle.loadString("assets/files/catalog.json");
+    // final response = await http.get(Uri.parse(Url));
+    // final catalogJson = response.body;
+    final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
